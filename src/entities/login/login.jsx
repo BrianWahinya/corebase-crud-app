@@ -37,7 +37,7 @@ export default function Login() {
             }}
           >
             <TextField
-              id="outlined-basic"
+              id="username"
               label="Username"
               variant="outlined"
               value="johndoe"
@@ -46,7 +46,7 @@ export default function Login() {
             />
             <TextField
               type="password"
-              id="outlined-basic"
+              id="password"
               label="Password"
               variant="outlined"
               value="johndoe"

@@ -7,7 +7,7 @@ export default function Finance() {
   return (
     <>
       <TextField
-        id="outlined-basic"
+        id="creditlimit"
         label="Credit Limit"
         variant="outlined"
         sx={{ marginTop: 0.5, fontSize: 12 }}

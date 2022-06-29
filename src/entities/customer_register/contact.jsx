@@ -4,13 +4,13 @@ export default function Contact() {
   return (
     <>
       <TextField
-        id="outlined-basic"
+        id="cellphone"
         label="Cellphone"
         variant="outlined"
         sx={{ marginTop: 0.5, fontSize: 12 }}
       />
       <TextField
-        id="outlined-basic"
+        id="email"
         label="Email"
         variant="outlined"
         sx={{ marginTop: 0.5, fontSize: 12 }}

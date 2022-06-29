@@ -8,37 +8,37 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { LocalDate } from "../../components";
 
 export default function BasicDetails() {
-  const matches400 = useMediaQuery("(max-width:400px)");
+  const matches470 = useMediaQuery("(max-width:470px)");
   return (
     <>
       <TextField
-        id="outlined-basic"
+        id="id"
         label="Id"
         variant="outlined"
         sx={{ marginTop: 0.5, fontSize: 12 }}
       />
       <TextField
-        id="outlined-basic"
+        id="fname"
         label="First Name"
         variant="outlined"
         sx={{ marginTop: 0.8, fontSize: 12 }}
       />
       <TextField
-        id="outlined-basic"
+        id="lname"
         label="Last Name"
         variant="outlined"
         sx={{ marginTop: 0.8, marginBottom: 1, fontSize: 12 }}
       />
       <LocalDate
-        type={matches400 ? "mobile" : "desktop"}
+        type={matches470 ? "mobile" : "desktop"}
         sx={{ p: 5, fontSize: 12 }}
       />
       <FormControl sx={{ marginTop: 0.5 }}>
-        <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
+        <FormLabel id="gender-radio-group">Gender</FormLabel>
         <RadioGroup
           row
-          aria-labelledby="demo-row-radio-buttons-group-label"
-          name="row-radio-buttons-group"
+          aria-labelledby="gender-radio-group"
+          name="gender-radio-group"
         >
           <FormControlLabel value="female" control={<Radio />} label="Female" />
           <FormControlLabel value="male" control={<Radio />} label="Male" />

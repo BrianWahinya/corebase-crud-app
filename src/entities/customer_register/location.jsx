@@ -12,10 +12,10 @@ export default function Location() {
   return (
     <>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Town</InputLabel>
+        <InputLabel id="location">Town</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
+          labelId="location"
+          id="location"
           value={location}
           label="Location"
           onChange={handleChange}

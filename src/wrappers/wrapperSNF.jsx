@@ -23,7 +23,7 @@ export default function WrapperSNF({ comp }) {
     <>
       <Navbar toggleDrawer={toggleDrawer} open={state.left} />
       <Sidebar toggleDrawer={toggleDrawer} open={state.left} />
-      <Container sx={{ minHeight: "85vh" }}>
+      <Container sx={{ minHeight: "85vh", maxWidth: "100%" }}>
         <Box sx={{ my: 1 }}>{comp}</Box>
       </Container>
       <Footer />

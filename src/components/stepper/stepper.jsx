@@ -8,12 +8,14 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import configs from "../../utils/configs";
 
 export default function LocalStepper({ dataObj }) {
   const [activeStep, setActiveStep] = useState(0);
 
-  const matches400 = useMediaQuery("(max-width:400px)");
-  const matches600 = useMediaQuery("(max-width:600px)");
+  const { "orient-mob-width": w_mob, "orient-mid-width": w_mid } = configs;
+  const matches470 = useMediaQuery(`(max-width:${w_mob.px})`);
+  const matches600 = useMediaQuery(`(max-width:${w_mid.px})`);
   const steps = dataObj;
 
   const handleNext = () => {
@@ -34,8 +36,8 @@ export default function LocalStepper({ dataObj }) {
         sx={{
           display: "flex",
           flexDirection: "column",
-          width: matches400 ? "100%" : matches600 ? "70vw" : "40vw",
-          minHeight: matches400 ? "40vh" : "60vh",
+          width: matches470 ? "100%" : matches600 ? "70vw" : "40vw",
+          minHeight: matches470 ? "40vh" : "60vh",
           margin: "auto",
           mt: 2,
         }}
@@ -51,12 +53,12 @@ export default function LocalStepper({ dataObj }) {
       <>
         <Stepper
           activeStep={activeStep}
-          orientation={matches400 ? "vertical" : "horizontal"}
+          orientation={matches470 ? "vertical" : "horizontal"}
         >
           {steps.map((step, index) => (
             <Step key={step.label}>
               <StepLabel>{step.label}</StepLabel>
-              {matches400 && (
+              {matches470 && (
                 <StepContent>
                   {stepWr(step.description)}
                   <Box sx={{ mb: 2 }}>
@@ -82,7 +84,7 @@ export default function LocalStepper({ dataObj }) {
             </Step>
           ))}
         </Stepper>
-        {!matches400 && activeStep < steps.length && (
+        {!matches470 && activeStep < steps.length && (
           <div>
             {stepWr(steps[activeStep].description)}
             <Box sx={{ mb: 2 }}>
