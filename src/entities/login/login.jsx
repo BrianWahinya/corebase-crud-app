@@ -40,12 +40,17 @@ export default function Login() {
               id="outlined-basic"
               label="Username"
               variant="outlined"
+              value="johndoe"
+              disabled
               sx={{ marginTop: 0.5, fontSize: 12 }}
             />
             <TextField
+              type="password"
               id="outlined-basic"
               label="Password"
               variant="outlined"
+              value="johndoe"
+              disabled
               sx={{ marginTop: 1 }}
             />
           </CardContent>

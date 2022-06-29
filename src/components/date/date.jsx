@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { TimePicker } from "@mui/x-date-pickers/TimePicker";
-import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
@@ -22,17 +20,19 @@ export default function LocalDate({ type }) {
         {type === "desktop" ? (
           <DesktopDatePicker
             label="Date of Birth"
-            inputFormat="MM/dd/yyyy"
+            inputFormat="dd/MM/yyyy"
             value={value}
             onChange={handleChange}
+            maxDate={new Date(today)}
             renderInput={(params) => <TextField {...params} />}
           />
         ) : (
           <MobileDatePicker
             label="Date of Birth"
-            inputFormat="MM/dd/yyyy"
+            inputFormat="dd/MM/yyyy"
             value={value}
             onChange={handleChange}
+            maxDate={new Date(today)}
             renderInput={(params) => <TextField {...params} />}
           />
         )}
