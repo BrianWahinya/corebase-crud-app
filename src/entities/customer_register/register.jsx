@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { LocalStepper } from "../../components";
 import BasicDetails from "./basicdetails";
 import Contact from "./contact";
@@ -23,6 +23,7 @@ export default function Register() {
       info: "1-10 characters. Must be numbers",
     },
   };
+  console.log(notes);
 
   const steps = [
     {
