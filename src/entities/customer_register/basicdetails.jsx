@@ -7,27 +7,26 @@ import FormLabel from "@mui/material/FormLabel";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { LocalDate } from "../../components";
 
+import { TextFieldCustom } from "../../components";
+import configs from "../../utils/configs";
+
 export default function BasicDetails() {
+  const { id, fname, lname } = configs.registration;
   const matches470 = useMediaQuery("(max-width:470px)");
   return (
     <>
-      <TextField
-        id="id"
-        label="Id"
-        variant="outlined"
-        sx={{ marginTop: 0.5, fontSize: 12 }}
-      />
-      <TextField
+      <TextFieldCustom id="id" lbl="Id *" helpTxt={id.info} />
+      <TextFieldCustom
         id="fname"
-        label="First Name"
-        variant="outlined"
-        sx={{ marginTop: 0.8, fontSize: 12 }}
+        lbl="First Name *"
+        helpTxt={fname.info}
+        sx={{ marginTop: 1, fontSize: 12 }}
       />
-      <TextField
+      <TextFieldCustom
         id="lname"
-        label="Last Name"
-        variant="outlined"
-        sx={{ marginTop: 0.8, marginBottom: 1, fontSize: 12 }}
+        lbl="Last Name *"
+        helpTxt={lname.info}
+        sx={{ marginTop: 1, marginBottom: 1, fontSize: 12 }}
       />
       <LocalDate
         type={matches470 ? "mobile" : "desktop"}

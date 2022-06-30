@@ -1,19 +1,25 @@
-import TextField from "@mui/material/TextField";
+import { useEffect, useState } from "react";
+import { TextFieldCustom } from "../../components";
+import configs from "../../utils/configs";
 
 export default function Contact() {
+  const { cellphone, email } = configs.registration;
+
   return (
     <>
-      <TextField
+      <TextFieldCustom
         id="cellphone"
-        label="Cellphone"
-        variant="outlined"
-        sx={{ marginTop: 0.5, fontSize: 12 }}
+        lbl="Cellphone *"
+        helpTxt={cellphone.info}
       />
-      <TextField
+      <TextFieldCustom
         id="email"
-        label="Email"
-        variant="outlined"
-        sx={{ marginTop: 0.5, fontSize: 12 }}
+        lbl="Email *"
+        helpTxt={email.info}
+        sx={{
+          marginTop: 1,
+          fontSize: 12,
+        }}
       />
     </>
   );

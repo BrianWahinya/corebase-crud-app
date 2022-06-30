@@ -48,7 +48,6 @@ export default function LocalStepper({ dataObj }) {
   };
 
   const stepGen = () => {
-    console.log(activeStep);
     return (
       <>
         <Stepper
