@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Corebase App",
+  "name": "Corebase Login and Registration App",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "corebase.ico",
       "sizes": "64x64 48x48 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "corebase192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "corebase512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
