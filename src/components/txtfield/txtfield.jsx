@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import isEmail from "validator/lib/isEmail";
 import isAlpha from "validator/lib/isAlpha";
@@ -9,7 +9,6 @@ import isLength from "validator/lib/isLength";
 export default function TextFieldCustom({ id, lbl, val, helpTxt, sx }) {
   const [stateVal, setStateVal] = useState("");
   const [focus, setFocus] = useState(false);
-  const [errors, setErrors] = useState([]);
 
   const handleChange = (event) => {
     const val = event.target.value;
